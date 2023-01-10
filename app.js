@@ -14,6 +14,6 @@ color.textContent=colors[randomNumber];
 
 
 
-const getRandomNumber=()=>{
-    return Math.floor(Math.random() * 3) + 1
+function getRandomNumber(){
+    return Math.floor(Math.random() * colors.length) 
 }
