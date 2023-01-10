@@ -3,12 +3,19 @@ const hex = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', "A", "B", "C", "D
 
 const _color =document.querySelector(".color");
 
+/**
+ * Returns a random number between 0 & 15
+ * @return {number}.
+ */
 const getRandomhexanumber=()=>{
 
     return Math.floor(Math.random() * hex.length); 
 }
 
-
+/**
+ * Returns a random hexadecimal color
+ * @return {string}.
+ */
 const getRandomHexadecimalColor=()=>{
 
     let hexColor='#';

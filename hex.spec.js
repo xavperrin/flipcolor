@@ -14,7 +14,7 @@ describe("hex.js", ()=>{
 
     describe("getRandomHexadecimalColor()", ()=>{
         
-        it('should return a string of 7 characters', function(){
+        it('should return a string of 7 characters (e.g. "#f18901")', function(){
             
             // expect return a string (e.g. "#f18901") ;
             expect(getRandomHexadecimalColor().length===7).toBeTruthy();
