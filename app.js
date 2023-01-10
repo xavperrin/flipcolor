@@ -13,7 +13,10 @@ color.textContent=colors[randomNumber];
 });
 
 
-
+/**
+ * Returns a random number between 1 & 3
+ * @return {number}.
+ */
 function getRandomNumber(){
     return Math.floor(Math.random() * colors.length) 
 }
