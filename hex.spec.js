@@ -27,8 +27,8 @@ describe("hex.js", ()=>{
             expect(getRandomHexadecimalColor().length===7).toBeTruthy();
 
         });
-        it('should return an hexadecimal color (e.g. "#F18901")'), ()=>{
+        it('should return an hexadecimal color (e.g. "#F18901")', ()=>{
             expect(getRandomHexadecimalColor()).toMatch(/#[0-9a-fA-F]{6}/);
-        }
+        });
     });
 })
