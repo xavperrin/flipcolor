@@ -9,6 +9,7 @@ const _color =document.querySelector(".color");
  */
 const getRandomhexanumber=()=>{
 
+    
     return Math.floor(Math.random() * hex.length); 
 }
 
@@ -21,9 +22,7 @@ const getRandomHexadecimalColor=()=>{
     let hexColor='#';
 
     for(let i=0;i<6;i++){
-
         hexColor+=hex[getRandomhexanumber()];
-        console.log(hexColor);
     }
 
         return hexColor;
