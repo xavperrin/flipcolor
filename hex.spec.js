@@ -17,6 +17,33 @@ describe("hex.js", ()=>{
             expect(getRandomhexanumber()).toBeGreaterThanOrEqual(0);
             expect(getRandomhexanumber()).toBeLessThanOrEqual(15);
         });
+        xit("should have a random distribution of hexadecimal numbers", function () {
+            const hex = "0123456789abcdef";
+            const sampleSize = 10000;
+            const expectedFrequency = sampleSize / hex.length;
+            const chiSquaredThreshold = 15.5;
+            let chiSquared = 0;
+        
+            // Generate sample of random numbers
+            const sample = Array.from({ length: sampleSize }, () => getRandomhexanumber());
+        
+            // Count occurrence frequency of the different numbers
+            const frequencies = Array.from({ length: hex.length }, () => 0);
+            sample.forEach((num) => {
+              frequencies[hex.indexOf(num)]++;
+            });
+        
+            // Calculate the sum of squares of the deviations compared with expected frequency 
+            frequencies.forEach((frequency) => {
+              chiSquared += (frequency - expectedFrequency) ** 2;
+            });
+        
+            // Divide the sum by the expected frequency
+            chiSquared /= expectedFrequency;
+        
+            // Verify that value of chi-squared is below the limit thresold
+            expect(chiSquared).toBeLessThan(chiSquaredThreshold);
+          });
     });
 
     describe("getRandomHexadecimalColor()", ()=>{
