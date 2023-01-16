@@ -41,7 +41,7 @@ describe("hex.js", ()=>{
             // Divide the sum by the expected frequency
             chiSquared /= expectedFrequency;
         
-            // Verify that value of chi-squared is below the limit thresold
+            // Verify that value of chi-squared is below the limit threshold
             expect(chiSquared).toBeLessThan(chiSquaredThreshold);
           });
     });
